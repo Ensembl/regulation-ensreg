@@ -1,0 +1,22 @@
+[package]
+name = "ensreg"
+version = "0.1.0"
+authors = ["Garth Ilsley"]
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Ensembl/regulation-ensreg"
+edition = "2024"
+rust-version = "1.88"
+
+description = """Script-like CLI for finalising Ensembl's regulatory annotation."""
+readme = "README.md"
+
+[dependencies]
+anyhow = "1.0.95"
+clap = { version = "4.5.48", features = ["derive"] }
+serde = { version = "1.0.228", features = ["derive"] }
+csv = "1.3.1"
+log = "0.4.28"
+env_logger = "0.11.8"
+regex = "1.11.3"
+gannot = { version ="0.1.0" }
+indexmap = "2.11.4"
