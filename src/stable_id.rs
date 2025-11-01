@@ -160,7 +160,7 @@ fn assign_bin(range: Range<u64>) -> (u32, u64) {
     // final bin is the two quarter bins on both sides of the bin centre
     let length = range.end - range.start;
     let bin_exp = u32::saturating_sub(length.ilog2(), 1); // might not work for small features
-    let quarter_binsize = 2_u64.pow(bin_exp); // there is probably a maximum size before overflow
+    let quarter_binsize = 2_u64.pow(bin_exp); // do we need to worry about overflow?
     let half_binsize = quarter_binsize * 2;
     let binsize = 2 * half_binsize;
     let bin_centre = (range.start + length / 2) / quarter_binsize;
